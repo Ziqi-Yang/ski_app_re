@@ -1,3 +1,9 @@
+/// 全局变量及共享状态
+/// 全局变量: Global
+/// 用户状态: UserModel
+/// App主题状态: ThemeModel
+/// APP语言状态: LocaleModel
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
