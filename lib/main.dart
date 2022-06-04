@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:ski_app_re/common/global.dart';
 import 'package:ski_app_re/generated/l10n.dart';
 import 'package:provider/provider.dart';
+import 'package:ski_app_re/common/global.dart';
+import 'package:ski_app_re/routes/tab_navigator.dart';
+import 'package:ski_app_re/states/profile.dart';
+import 'package:ski_app_re/routes/account_page.dart';
+import 'package:ski_app_re/routes/history_page.dart';
+import 'package:ski_app_re/routes/home_page.dart';
+import 'package:ski_app_re/routes/monents_page.dart';
+import 'package:ski_app_re/routes/shop_page.dart';
 
 
 void main() => Global.init().then((e) => runApp(const SkiApp()));
@@ -28,6 +35,7 @@ class SkiApp extends StatelessWidget {
             onGenerateTitle: (context){
               return S.of(context).appTitle;
             },
+            locale: localeModel.getLocale(),
             localizationsDelegates: const [
               // 本地化的代理类
               GlobalMaterialLocalizations.delegate,
@@ -56,6 +64,21 @@ class SkiApp extends StatelessWidget {
                 return locale;
               }
             },
+            home: TabNavigator(),
+            routes: {
+              "home": (context) => const HomeRoute(),
+              "history": (context) => const HistoryRoute(),
+              "moments": (context) => const MomentsRoute(),
+              "shop": (context) => const ShopRoute(),
+              "user": (context) => const AccountRoute()
+            },
+
+            // initialRoute: "home",
+            // onGenerateRoute: (RouteSettings settings){
+            //   String? routeName = settings.name;
+            //   print(routeName);
+            // },
+
           );
         },
       ),
