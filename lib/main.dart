@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ski_app_re/common/global.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => Global.init().then((e) => runApp(MyApp()));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

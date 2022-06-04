@@ -1,4 +1,6 @@
 {
+  "user?": "$user",
+  "token?": "",
   "theme": 0,
-  "locale": null
+  "locale?": ""
 }
