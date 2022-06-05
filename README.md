@@ -13,8 +13,9 @@ ski app redeveloped version
 
 ## Ideas
 
-1. 实现类似`bilibili`底部导航栏个性主题的效果
+1. 实现类似`bilibili`底部导航栏个性主题的效果 (抛弃)
    - [Using a BottomNavigationBar in Flutter, how can I set a background image, instead of using just a color?](https://stackoverflow.com/questions/60820046/using-a-bottomnavigationbar-in-flutter-how-can-i-set-a-background-image-instea)
+2. 通过二维码连接设备
 
 
 ## 参考

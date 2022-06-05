@@ -1,3 +1,8 @@
 {
-  "appTitle": "Ski App"
+  "appTitle": "ski app",
+  "historyPageName": "history",
+  "momentsPageName": "moments",
+  "homePageName": "home",
+  "shopPageName": "shop",
+  "accountPageName": "profile"
 }

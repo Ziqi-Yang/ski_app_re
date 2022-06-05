@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ski_app_re/generated/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:ski_app_re/common/global.dart';
-import 'package:ski_app_re/routes/tab_navigator.dart';
+import 'package:ski_app_re/tab_navigator.dart';
 import 'package:ski_app_re/states/profile.dart';
 import 'package:ski_app_re/routes/account_page.dart';
 import 'package:ski_app_re/routes/history_page.dart';
@@ -36,6 +36,7 @@ class SkiApp extends StatelessWidget {
               return S.of(context).appTitle;
             },
             locale: localeModel.getLocale(),
+            // locale: const Locale("zh", "CN"),
             localizationsDelegates: const [
               // 本地化的代理类
               GlobalMaterialLocalizations.delegate,
@@ -44,7 +45,7 @@ class SkiApp extends StatelessWidget {
               S.delegate
             ],
             supportedLocales: const [
-              Locale('zh', 'CN'), // 中文简
+              Locale('zh', 'CN'), // 中文简体
               Locale('en', 'US'), // 美国英语
               //其它Locales
             ],

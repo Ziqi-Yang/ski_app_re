@@ -1,3 +1,8 @@
 {
-  "appTitle": "闪动滑雪"
+  "appTitle": "闪动滑雪",
+  "historyPageName": "历史",
+  "momentsPageName": "空间",
+  "homePageName": "主页",
+  "shopPageName": "商店",
+  "accountPageName": "账户"
 }
