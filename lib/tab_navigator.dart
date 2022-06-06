@@ -21,7 +21,7 @@ class _TabNavigatorState extends State<TabNavigator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // extendBody: true, // 对于有透明的bottomNavigatorBar有用, 拓展到下方
+      extendBody: true, // 对于有透明的bottomNavigatorBar有用, 拓展到下方
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
@@ -35,7 +35,9 @@ class _TabNavigatorState extends State<TabNavigator> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
+        // circle border in material 3
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(200)),
+        backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 1,
         child: Image.asset("assets/images/logo.png", width: 50, height: 50,),
         onPressed: (){
@@ -46,21 +48,21 @@ class _TabNavigatorState extends State<TabNavigator> {
         },
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 6,
-        elevation: 2,
-        color: Colors.white,
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              buildBotomItem(0, Icons.timeline_outlined, S.of(context).historyPageName),
-              buildBotomItem(1, Icons.join_full_outlined, S.of(context).momentsPageName),
-              buildBotomItem(-1, null, ""),
-              buildBotomItem(3, Icons.shop_outlined, S.of(context).shopPageName),
-              buildBotomItem(4, Icons.account_circle_outlined, S.of(context).accountPageName),
-            ],
-          ),
+        elevation: 3,
+        // color: Colors.white,
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            buildBotomItem(0, Icons.timeline_outlined, S.of(context).historyPageName),
+            buildBotomItem(1, Icons.join_full_outlined, S.of(context).momentsPageName),
+            buildBotomItem(-1, null, ""),
+            buildBotomItem(3, Icons.shop_outlined, S.of(context).shopPageName),
+            buildBotomItem(4, Icons.account_circle_outlined, S.of(context).accountPageName),
+          ],
+        ),
       ),
     );
   }
@@ -93,7 +95,7 @@ class _TabNavigatorState extends State<TabNavigator> {
       padItem = Padding(
         padding: padding,
         child: Container(
-          color: Colors.white,
+          // color: Colors.white,
           child: Center(
             child: Column(
               children: <Widget>[

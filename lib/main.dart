@@ -29,9 +29,7 @@ class SkiApp extends StatelessWidget {
       child: Consumer2<ThemeModel, LocaleModel>(
         builder: (BuildContext context, ThemeModel themeModel,LocaleModel localeModel, child){
           return MaterialApp(
-            theme: ThemeData(
-              primarySwatch: themeModel.theme
-            ),
+            theme: Global.themes[themeModel.theme],
             onGenerateTitle: (context){
               return S.of(context).appTitle;
             },

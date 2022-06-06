@@ -5,9 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ski_app_re/models/profile.dart';
 
-const _themes = <MaterialColor>[
-  Colors.blue,
-  Colors.cyan,
+List<ThemeData> _themes = <ThemeData>[
+  // light theme
+  ThemeData(
+      brightness: Brightness.light,
+      colorScheme: const ColorScheme.light(
+        onPrimary: Colors.black,
+      ),
+      useMaterial3: true
+  ),
+  // dark theme
+  ThemeData(
+      brightness: Brightness.dark,
+      bottomAppBarColor: Colors.black,
+      useMaterial3: true
+  ),
 ];
 
 class Global{
@@ -16,7 +28,7 @@ class Global{
   // 是否为release版
   static bool get isRelease => const bool.fromEnvironment("dart.vm.product");
   // 可选的主题列表
-  static List<MaterialColor> get themes => _themes;
+  static List<ThemeData> get themes => _themes;
 
 
   //初始化全局信息，会在APP启动时执行

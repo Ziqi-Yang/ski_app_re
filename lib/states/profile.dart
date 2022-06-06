@@ -34,12 +34,15 @@ class UserModel extends ProfileChangeNotifier {
 }
 
 class ThemeModel extends ProfileChangeNotifier {
-  MaterialColor get theme => Global.themes[_profile.theme];
+  int get theme => _profile.theme;
 
   // 主题改变后，通知其依赖项，新主题会立即生效
-  set theme(MaterialColor color) {
-    if (color != theme) {
-      _profile.theme = Global.themes.indexOf(color);
+  set theme(int themeIndex) {
+    if (themeIndex >= Global.themes.length){
+      throw "themeIndex > total themes list length";
+    }
+    if (themeIndex != theme) {
+      _profile.theme = themeIndex;
       notifyListeners();
     }
   }
