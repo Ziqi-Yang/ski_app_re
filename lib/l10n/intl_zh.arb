@@ -4,5 +4,6 @@
   "momentsPageName": "空间",
   "homePageName": "主页",
   "shopPageName": "商店",
-  "accountPageName": "账户"
+  "accountPageName": "账户",
+  "scan": "扫码"
 }

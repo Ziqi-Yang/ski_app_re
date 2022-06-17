@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "historyPageName": MessageLookupByLibrary.simpleMessage("history"),
         "homePageName": MessageLookupByLibrary.simpleMessage("home"),
         "momentsPageName": MessageLookupByLibrary.simpleMessage("moments"),
+        "scan": MessageLookupByLibrary.simpleMessage("scan"),
         "shopPageName": MessageLookupByLibrary.simpleMessage("shop")
       };
 }

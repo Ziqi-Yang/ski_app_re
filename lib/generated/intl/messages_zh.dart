@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "historyPageName": MessageLookupByLibrary.simpleMessage("历史"),
         "homePageName": MessageLookupByLibrary.simpleMessage("主页"),
         "momentsPageName": MessageLookupByLibrary.simpleMessage("空间"),
+        "scan": MessageLookupByLibrary.simpleMessage("扫码"),
         "shopPageName": MessageLookupByLibrary.simpleMessage("商店")
       };
 }

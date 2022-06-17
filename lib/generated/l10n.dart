@@ -109,6 +109,16 @@ class S {
       args: [],
     );
   }
+
+  /// `scan`
+  String get scan {
+    return Intl.message(
+      'scan',
+      name: 'scan',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

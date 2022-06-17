@@ -4,5 +4,6 @@
   "momentsPageName": "moments",
   "homePageName": "home",
   "shopPageName": "shop",
-  "accountPageName": "profile"
+  "accountPageName": "profile",
+  "scan": "scan"
 }
